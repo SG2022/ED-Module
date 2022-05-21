@@ -1,0 +1,23 @@
+hibernate:
+  show_sql: true
+logging:
+  level:
+    org:
+      springframework:
+        web: DEBUG
+server:
+  error:
+    whitelabel:
+      enabled: false
+  port: 9092
+spring:
+  datasource:
+    password: mysql
+    url: jdbc:mysql://localhost:3306/insurancedb?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    username: root
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: update
